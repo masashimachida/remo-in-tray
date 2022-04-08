@@ -1,0 +1,33 @@
+{
+    "name": "remo-in-tray",
+    "version": "1.0.0",
+    "description": "メニューバーからRemoを操作するぜ",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "start": "electron ./",
+        "clear": "rm -rf ./dist",
+        "build": "electron-builder -m"
+    },
+    "keywords": [],
+    "author": "Masashi MACHIDA<masashi.machida.mm@gmail.com> (https://masashimachida.github.io/)",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^17.3.1",
+        "electron-builder": "^22.14.13"
+    },
+    "postinstall": "electron-builder install-app-deps",
+    "build": {
+        "productName": "RemoInTray",
+        "appId": "io.github.masashi.machida.app.remo_in_tray",
+        "mac": {
+            "target": "dir"
+        }
+    },
+    "dependencies": {
+        "dotenv": "^16.0.0",
+        "electron-auto-launch": "^5.0.7",
+        "electron-log": "^4.4.6",
+        "request": "^2.88.2"
+    }
+}
