@@ -153,10 +153,10 @@ electron.app.on('ready', () => {
         API.postAirconSettings('button=airdir-swing')
     }
 
-    // setInterval(() => {
-    //     updateDevice()
-    //     updateAppliance()
-    // }, 1000 * 60 * 5)
+    setInterval(() => {
+        updateDevice()
+        updateAppliance()
+    }, 1000 * 60 * 3)
     updateDevice()
     updateAppliance()
 
